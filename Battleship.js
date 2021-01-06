@@ -1,12 +1,15 @@
 
-var shipPoint1 = 3;
-var shipPoint2 = 4;
-var shipPoint3 = 5;
+var randomLoc = Math.floor(Math.random() * 5);
+var shipPoint1 = randomLoc;
+var shipPoint2 = shipPoint1 + 1;
+var shipPoint3 = shipPoint2 + 1;
 var guess;
 var hits = 0;
 var guesses = 0;
 
 var isSunk = false;
+
+console.log(randomLoc);
 
 while(isSunk == false){
 	
@@ -30,7 +33,7 @@ while(isSunk == false){
 			hits += 1;
 			alert("Hit!");
 			
-			//if hits is equal to 3 set isSunk to true and tell the player they sunk the battleship
+			//if hits variable is equal to 3 set isSunk to true and tell the player they sunk the battleship
 			if(hits == 3){
 				
 				isSunk = true;
